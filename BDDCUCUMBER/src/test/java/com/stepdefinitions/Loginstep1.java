@@ -18,6 +18,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 //import io.github.bonigarcia.wdm.WebDriverManager;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Loginstep1 {
 	WebDriver driver;
@@ -32,9 +33,9 @@ public class Loginstep1 {
 
 	@Given("user needs to be on login page")
 	public void user_needs_to_be_on_login_page() {
-		System.setProperty("webdriver.chrome.driver",
-				"F:\\0730AM NOVEMBER 2022 ONLINE SELNIUM\\BDDCUCUMBER\\drivers\\chromedriver.exe");
-		// WebDriverManager.chromedriver().setup();
+		//System.setProperty("webdriver.chrome.driver",
+			//	"F:\\0730AM NOVEMBER 2022 ONLINE SELNIUM\\BDDCUCUMBER\\drivers\\chromedriver.exe");
+		 WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
